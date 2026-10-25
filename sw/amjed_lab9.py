@@ -62,7 +62,7 @@ def read_mem(addr):
 def sw_handler():
     while(1):
         sw = read_mem(DIP_SW_ADDR)
-        write_mem(RGB_LED_ADDR, SW_TO_RGB_LUT.get(sw))
+        write_mem(RGB_LED_ADDR, SW_TO_RGB_LUT.get(sw & 0b111))
 
 def led_pattern_gen():
     i = 1
