@@ -69,8 +69,8 @@ def led_pattern_gen():
     while(1):
         write_mem(GREEN_LED_ADDR, i)
         time.sleep(0.5)
-        i <<= 1
-        i %= 15
+        i += 1
+        i %= 16
 
 
 print("Entering forever loop.")
